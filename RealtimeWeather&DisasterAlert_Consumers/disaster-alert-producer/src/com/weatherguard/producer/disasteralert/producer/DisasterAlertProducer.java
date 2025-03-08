@@ -23,8 +23,8 @@ public class DisasterAlertProducer implements DisasterAlertService, BundleActiva
             null
         );
      // Broadcast some sample alerts
-        broadcastAlert("Kandy", "FLOOD", "HIGH", "Heavy flooding reported in central areas");
-        broadcastAlert("Colombo", "STORM", "MEDIUM", "Tropical storm approaching, heavy rain expected");
+//        broadcastAlert("Kandy", "FLOOD", "HIGH", "Heavy flooding reported in central areas");
+//        broadcastAlert("Colombo", "STORM", "MEDIUM", "Tropical storm approaching, heavy rain expected");
         broadcastAlert("Galle", "LANDSLIDE", "LOW", "Minor landslide risk in hill regions");
         
         System.out.println("Disaster Alert Producer Bundle Started");    }
