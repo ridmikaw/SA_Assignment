@@ -1,4 +1,4 @@
-package com.tourismsafety.model;
+package com.weatherguard.producer.disasteralert.model;
 
 import java.time.LocalDateTime;
 

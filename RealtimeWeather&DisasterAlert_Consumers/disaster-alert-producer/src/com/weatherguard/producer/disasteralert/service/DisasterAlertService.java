@@ -1,6 +1,6 @@
-package com.tourismsafety.service;
+package com.weatherguard.producer.disasteralert.service;
 
-import com.tourismsafety.model.DisasterAlert;
+import com.weatherguard.producer.disasteralert.model.DisasterAlert;
 
 public interface DisasterAlertService {
 	/**
