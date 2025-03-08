@@ -1,7 +1,7 @@
-package com.tourismsafety.producer;
+package com.weatherguard.producer.disasteralert.producer;
 
-import com.tourismsafety.model.DisasterAlert;
-import com.tourismsafety.service.DisasterAlertService;
+import com.weatherguard.producer.disasteralert.model.DisasterAlert;
+import com.weatherguard.producer.disasteralert.service.DisasterAlertService;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

@@ -1,7 +1,8 @@
-package com.tourismsafety.consumer;
+package com.weatherguard.consumer.touroperator.consumer;
 
-import com.tourismsafety.service.DisasterAlertService;
-import com.tourismsafety.model.DisasterAlert;
+import com.weatherguard.producer.disasteralert.model.DisasterAlert;
+import com.weatherguard.producer.disasteralert.service.DisasterAlertService;
+
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
@@ -55,16 +56,42 @@ public class TourOperatorConsumer implements BundleActivator {
         System.out.println("Alert Type: " + alert.getAlertType());
         System.out.println("Severity: " + alert.getSeverityLevel());
         
+        
         // Decision logic for schedule adjustment
         switch (alert.getSeverityLevel()) {
             case "LOW":
+            	System.out.println("\n LOW SEVERITY RESPONSE:");
                 System.out.println("Minor schedule modifications recommended");
+                System.out.println("Continue tours with caution");
+                System.out.println("Notify guides and tourists of potential risks");
+                // Specific actions for different disaster types
+                if (alert.getAlertType().equals("RAIN") || alert.getAlertType().equals("STORM")) {
+                    System.out.println("Provide rain gear to all tourists");
+                    System.out.println("Move outdoor activities to covered areas where possible");
+                } else if (alert.getAlertType().equals("HEAT")) {
+                    System.out.println("Add extra water breaks");
+                    System.out.println("Reschedule outdoor activities to early morning/evening");
+                }
                 break;
             case "MEDIUM":
-                System.out.println("Significant schedule changes required");
+            	  System.out.println("\n MEDIUM SEVERITY RESPONSE:");
+                  System.out.println("Significant schedule changes required");
+                  System.out.println("Reroute tours away from high-risk areas");
+                  System.out.println("Prepare backup indoor activities");
+                  System.out.println("Check-in with all guides hourly");
+                  
+                  if (alert.getAlertType().equals("FLOOD")) {
+                      System.out.println("Avoid all low-lying areas and water crossings");
+                      System.out.println("Prepare emergency evacuation vehicles");
+                  } else if (alert.getAlertType().equals("LANDSLIDE")) {
+                      System.out.println("Cancel all hillside and mountain tours");
+                      System.out.println("Restrict tours to urban areas only");
+                  }
                 break;
             case "HIGH":
             case "CRITICAL":
+                String urgencyLevel = alert.getSeverityLevel().equals("HIGH") ? "URGENT" : "EMERGENCY";
+                System.out.println("\n " + urgencyLevel + " RESPONSE REQUIRED:");
                 System.out.println("TOUR CANCELLATION RECOMMENDED");
                 break;
         }
