@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Tour-operator-consumer
+Bundle-SymbolicName: tour-operator-consumer
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.tourismsafety.consumer.TourOperatorConsumer
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Automatic-Module-Name: tour.operator.consumer
+Import-Package: com.tourismsafety.model,
+ com.tourismsafety.service,
+ org.osgi.framework;version="1.3.0"
+Bundle-ActivationPolicy: lazy

@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Disaster Alert Producer
+Bundle-SymbolicName: com.tourismsafety.producer
+Bundle-Version: 1.0.0.qualifier
+Export-Package: com.tourismsafety.model,
+ com.tourismsafety.service
+Bundle-Activator: com.tourismsafety.producer.DisasterAlertProducer
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Automatic-Module-Name: disaster.alert.producer
+Import-Package: com.tourismsafety.model,
+ com.tourismsafety.service,
+ org.osgi.framework;version="1.3.0"
+Bundle-ActivationPolicy: lazy
